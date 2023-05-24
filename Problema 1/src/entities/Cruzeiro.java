@@ -4,6 +4,9 @@ public class Cruzeiro extends Navio {
 	
 	private int numMax;
 
+	public Cruzeiro() {
+	}
+
 	public Cruzeiro(String nome, String ano, int numMax) {
 		super(nome, ano);
 		this.numMax = numMax;
