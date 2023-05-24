@@ -11,8 +11,7 @@ public class TesteRetangulo {
 		Retangulo ret1 = new Retangulo();
 		Retangulo ret2 = new Retangulo();
 		
-		double comprimento;
-		double largura;
+		double comprimento, largura;
 		
 		System.out.println("--RETÂNGULO 1--");
 		System.out.println("Insira um valor para o comprimento");
