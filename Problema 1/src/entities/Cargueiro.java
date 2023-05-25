@@ -23,6 +23,6 @@ public class Cargueiro extends Navio {
 
 	@Override
 	public String toString() {
-		return "Navio de nome" + getNome() + ", com capacidade de carga em toneladas de " + capacidadeCarga;
+		return "Navio de nome " + getNome() + ", com capacidade de carga em toneladas de " + capacidadeCarga;
 	}	
 }
