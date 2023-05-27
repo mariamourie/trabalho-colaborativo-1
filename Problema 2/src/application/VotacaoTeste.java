@@ -55,8 +55,27 @@ public class VotacaoTeste {
        for (int candidato = 1; candidato <= MaxCandidatos; candidato++)
           if (lista[candidato].numVotos == votosNoGanhador)
         	  out.printf("   %s\n", lista[candidato].nome);
+       
+       int menosVotado = encontrarMenosVotado(lista, 1, MaxCandidatos);
+       int votosNoMenosVotado = lista[menosVotado].numVotos;
+       out.printf("\n Candidato(s) com menor número de votos: \n");
+       for(int candidato = 1; candidato <= MaxCandidatos; candidato++) {
+    	   if(lista[candidato].numVotos == votosNoMenosVotado) {
+    		   out.printf("%s \n", lista[candidato].nome);
+    	   }
+       }
     } 
 
+    public static int encontrarMenosVotado(Candidato[] lista, int primeiro, int ultimo) {
+    	int menosVotado = primeiro;
+		for (int candidato = primeiro + 1; candidato <= ultimo; candidato++) {
+			if (lista[candidato].numVotos < lista[menosVotado].numVotos) {
+				menosVotado = candidato;
+			}
+		}
+		return menosVotado;
+    }
+    
     public static int encontrarMaisVotado(Candidato[] lista, int pri, int ult) {
        int maisVotado = pri;
        for (int candidato = pri + 1; candidato <= ult; candidato++)
