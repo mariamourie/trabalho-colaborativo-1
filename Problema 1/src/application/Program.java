@@ -60,6 +60,8 @@ public class Program {
 		for(Navio navio: navios) {
 			System.out.println(navio.toString());
 		}
+		
+		sc.close();
 	}
 
 }
