@@ -19,12 +19,11 @@ public class Program {
 		int tempo = sc.nextInt();
 		
 		BalaDeCanhao bala = new BalaDeCanhao(0.0, 0.0);
-		ArrayList<Ponto> localizacoes = bala.atirar(angulo, velocidadeInicial, tempo);
+		ArrayList<Ponto> pontos = bala.atirar(angulo, velocidadeInicial, tempo);
 		
-		for(Ponto localizacao: localizacoes) {
-			System.out.println("(" + localizacao.getX() + ", " + localizacao.getY() + ")");
+		for(Ponto ponto: pontos) {
+			System.out.println("(" + ponto.getX() + ", " + ponto.getY() + ")");
 		}
 		sc.close();
 	}
-
 }
